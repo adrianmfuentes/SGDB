@@ -3,6 +3,9 @@ project(SGDB)
 
 set(CMAKE_CXX_STANDARD 17)
 
+# Establish the build type to be Release by default if not specified by the user
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MDd")
+
 # Include the gtest library
 add_subdirectory(googletest)
 
