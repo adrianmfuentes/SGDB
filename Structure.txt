@@ -1,20 +1,4 @@
-/mi_sgdb
-│
-├── /src        # Código fuente principal
-│   ├── main.cpp
-│   ├── database.cpp
-│   ├── table.cpp
-│   └── index.cpp
-│
-├── /include    # Archivos de cabecera (.h)
-│   ├── database.h
-│   ├── table.h
-│   └── index.h
-│
-├── /tests      # Pruebas unitarias
-│   ├── test_database.cpp
-│   ├── test_table.cpp
-│   └── test_index.cpp
-│
-├── Makefile    # Archivo para construir el proyecto
-└── README.md   # Documentación
+cmake -S . -B build 
+
+cmake --build build
+
