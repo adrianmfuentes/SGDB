@@ -1,4 +1,4 @@
-#include "index.h"
+#include "../include/index.h"
 #include <iostream>
 
 Index::Index(const std::string& columnName, const std::vector<std::string>& columnValues)

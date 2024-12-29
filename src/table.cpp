@@ -1,6 +1,7 @@
-#include "table.h"
+#include "../include/table.h"
 #include <iostream>
 #include <set>
+#include <algorithm>
 
 Table::Table(const std::string& name, const std::vector<std::string>& columns)
     : name(name), columns(columns) {

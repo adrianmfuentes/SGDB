@@ -1,4 +1,4 @@
-#include "database.h"
+#include "../include/database.h"
 #include <iostream>
 #include <set>
 #include <memory>  // For std::make_unique
@@ -14,7 +14,13 @@ void Database::insertRow(const std::string& tableName, const std::vector<std::st
 
     for (const auto& table : tables) {
         if (table->getName() == tableName) {
-            table->insert(row);
+
+            if (row.size() != table->getColumns().size()) {
+                std::cerr << "Error: Row does not match the number of columns!" << std::endl;
+                return;  // Abort if the row size does not match the number of columns
+            }
+            
+            table->insert(row);  
             checkInvariants();
             return;
         }
